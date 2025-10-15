@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+    <style>
+        body { background-color: aqua; font-family: Arial, sans-serif; }
+        span { color: red; }
+        #successMsg { color: green; font-weight: bold; }
+        form { max-width: 500px; margin: auto; padding: 20px; background-color: #f0f8ff; border-radius: 10px; }
+        input, select { width: 100%; padding: 8px; margin: 5px 0; }
+        input[type="radio"], input[type="checkbox"] { width: auto; }
+    </style>
+</head>
+<body>
+    <form id="registerForm">
+        <h1>Registration Form</h1>
+
+        <label>Username:</label>
+        <input type="text" id="username" name="username" required>
+        <span id="usernameError"></span>
+        <br>
+
+        <label>Email:</label>
+        <input type="text" id="email" name="email" required>
+        <span id="emailError"></span>
+        <br>
+
+        <label>Password:</label>
+        <input type="password" id="password" name="password" required>
+        <span id="passwordError"></span>
+        <br>
+
+        <label>Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <span id="confirmError"></span>
+        <br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <span id="genderError"></span>
+        <br><br>
+
+        <label>City:</label>
+        <select id="city" name="city">
+            <option value="">Select City</option>
+            <option>Guntur</option>
+            <option>Vijayawada</option>
+            <option>Hyderabad</option>
+            <option>Vizag</option>
+            <option>Khammam</option>
+            <option>Rajhamandri</option>
+        </select>
+        <span id="cityError"></span>
+        <br>
+
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the terms and conditions</label><br>
+
+        <input type="checkbox" id="attendance" name="attendance" required>
+        <label for="attendance">I will maintain attendance >85%</label><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <div id="successMsg"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
